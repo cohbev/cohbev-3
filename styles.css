@@ -1,0 +1,16 @@
+.center {
+    text-align: center;
+}
+
+.comic-sans {
+    font-family: "Comic Sans MS",ui-rounded;
+}
+
+a {
+    text-decoration: none;
+    color: #379a00;
+}
+
+a:hover {
+    color: blue;
+}
