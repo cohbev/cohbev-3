@@ -1,0 +1,57 @@
+* {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #8ea6cc;
+}
+
+h1 {
+    font-family: 'Phudu', cursive;
+    font-size: 150px;
+    margin-bottom: 0;
+}
+
+header p {
+    margin-top: 0;
+}
+
+.max-width-200 {
+    max-width: 200px
+}
+
+.comic-sans {
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.no-underline a{
+    text-decoration: none;
+}
+
+.green a{
+    color: #379a00
+}
+
+a:hover {
+    color: #8ea6cc;
+}
+
+button {
+    background-color: #3b6442;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2px;
+}
+
+button a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+footer button a {
+    font-size: 13px;
+}
