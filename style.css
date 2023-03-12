@@ -7,7 +7,7 @@ body {
     background-color: #8ea6cc;
 }
 
-h1 {
+.large-header {
     font-family: 'Phudu', cursive;
     font-size: 150px;
     margin-bottom: 0;
@@ -33,7 +33,7 @@ header p {
     color: #379a00
 }
 
-a:hover {
+button a:hover{
     color: #8ea6cc;
 }
 
