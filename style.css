@@ -37,6 +37,11 @@ button a:hover{
     color: #8ea6cc;
 }
 
+button span:hover {
+    color: #8ea6cc;
+    cursor: pointer;
+}
+
 button {
     background-color: #3b6442;
     border: none;

@@ -17,7 +17,7 @@ divertirsi to enjoy oneself, have a good time / fun
 farsi la barba to shave (facial hair)
 farsi la doccia to have a shower
 incontrarsi con to meet up with
-    lamentarsi to complain
+lamentarsi to complain
 laurearsi to graduate (university)
 lavarsi to wash oneself
 lavarsi i capelli... to wash one's hair
