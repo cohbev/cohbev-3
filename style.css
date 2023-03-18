@@ -53,19 +53,18 @@ button {
     color: white;
 }
 
-#begin-learning-button {
-    height: 85px;
-    width: 380px;
-    margin-top: 100px;
+.main-button-1 {
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
     font-size: 50px;
     font-family: 'Phudu', cursive;
-    transition: height 200ms, width 200ms, margin-top 200ms, font-size 200ms;
+    transition: height 200ms, width 200ms, margin-top 200ms, font-size 200ms, margin-bottom 200ms;
 }
 
-#begin-learning-button:hover {
-    height: 106px;
-    width: 475px;
-    margin-top: 90px;
+.main-button-1:hover {
+    margin-top: 45px;
+    margin-bottom: 3px;
     font-size: 60px;
     cursor: pointer;
 }

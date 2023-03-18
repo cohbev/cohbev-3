@@ -1,29 +1,10 @@
-function beginLearning() {
+function createNewListButton() {
     window.alert('Hello');
-    const token = "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";
-    const repoOwner = "cohbev-3";
-    const repoName = "keprins.tech-data";
-    const filePath = "learnlists.json";
-
-// Retrieve JSON data
-    fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
-        headers: {
-            "Authorization": `token ${token}`
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
-            const jsonData = JSON.parse(atob(data.content)); // Parse JSON data from Base64-encoded content
-            console.log(jsonData);
-        })
-        .catch(error => console.error(error));
-
 }
 
-
-
-
-
+function browseExistingListsButton() {
+    window.alert('Hi')
+}
 
 
 

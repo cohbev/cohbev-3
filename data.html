@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>Database Test</title>
+</head>
+<body>
+<label for="email">Email</label>
+<input id="email" name="email" type="text" placeholder="Enter Email">
+
+<label for="uname">Username</label>
+<input id="uname" type="text" placeholder="Enter Username" name="uname">
+
+<label for="age">Age</label>
+<input id="age" type="text" placeholder="Enter Age" name="age">
+
+<button type="submit" id="submitData">SUBMIT</button>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+    import { getDatabase, ref, set, onValue, update, remove } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDxRbz9F8QBPzokNm0Hl_uxYHMhukCFXj8",
+        authDomain: "keprinstech-data.firebaseapp.com",
+        projectId: "keprinstech-data",
+        storageBucket: "keprinstech-data.appspot.com",
+        messagingSenderId: "17047244544",
+        appId: "1:17047244544:web:8c6c3ca4cdf15414bcade5"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    submitData.addEventListener('click',(e) => {
+
+        var email = document.getElementById('email').value;
+        var username = document.getElementById('uname').value;
+        var age = document.getElementById('age').value;
+
+        // const newKey = push(child(ref(database), 'users')).key;
+
+        // set(ref(database, 'users/' + username), {
+        //   username: username,
+        //   email: email,
+        //   age : age
+        // }).then(() => {
+        //   // Data saved successfully!
+        //   alert('data submitted');
+        // })
+        //   .catch((error) => {
+        //     // The write failed...
+        //     alert(error);
+        //   });
+
+        // const starCountRef = ref(database, 'users/' + username);
+        // onValue(starCountRef, (snapshot) => {
+        //   const data = snapshot.val();
+        //   alert(data.email);
+        // });
+
+        // update(ref(database, 'users/' + username), {
+        //   email: email,
+        //   age : age
+        // }).then(() => {
+        //   // Data saved successfully!
+        //   alert('data updated');
+        // })
+        //   .catch((error) => {
+        //     // The write failed...
+        //     alert(error);
+        //   });
+
+        // removeData.addEventListener('click',(e) => {
+        //   const username = document.getElementById('username').value;
+        //
+        //   remove(ref(database, 'users/' + username));
+        //   alert('removed');
+        // });
+    });
+
+
+
+</script>
+
+</body>
+</html>
