@@ -9,8 +9,9 @@ body {
 
 .large-header {
     font-family: 'Phudu', cursive;
-    font-size: 150px;
-    margin-bottom: 0;
+    font-size: 200px;
+    margin-bottom: 50px;
+    margin-top: 65px;
 }
 
 header p {
@@ -18,7 +19,9 @@ header p {
 }
 
 .max-width-200 {
-    max-width: 200px
+    max-width: 200px;
+    vertical-align: top;
+    margin-bottom: 50px;
 }
 
 .comic-sans {
@@ -54,6 +57,7 @@ button {
 }
 
 .main-button-1 {
+    color: white;
     padding: 20px;
     margin-top: 50px;
     margin-bottom: 10px;
@@ -69,6 +73,29 @@ button {
     cursor: pointer;
 }
 
+.main-button-1:active {
+    color: #8ea6cc;
+}
+
+.main-button-2 {
+    padding: 20px;
+    margin: 50px 70px 10px;
+    font-size: 30px;
+    font-family: 'Phudu', cursive;
+    transition: height 200ms, width 200ms, margin-top 200ms, font-size 200ms, margin-bottom 200ms;
+}
+
+.main-button-2:hover {
+    margin-top: 45px;
+    margin-bottom: 3px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.main-button-2:active {
+    color: #8ea6cc;
+}
+
 button a {
     font-size: 16px;
     color: white;
@@ -77,4 +104,76 @@ button a {
 
 footer button a {
     font-size: 13px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #3b6442;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 0;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 16px 16px 12px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: #8ea6cc;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3b6442;
+    min-width: 146px;
+    box-shadow: 0 20px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+    padding-top: 10px;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    color: #8ea6cc;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a .navbar-img {
+    max-width: 40px;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
