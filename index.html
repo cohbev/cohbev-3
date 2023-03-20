@@ -1,9 +1,9 @@
 <html lang='en'>
 <head>
-    <title>Mr Keprins Official Website</title>
+    <title>Mr Keprins Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='style.css'>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <meta charset='UTF-8'>
@@ -15,31 +15,64 @@
     <script src="index.js"></script>
 </head>
 <body>
-<div class="navbar">
-    <a href="./"><img src="images/Mr%20Keprins.png" class="navbar-img"></a>
+<nav>
+    <a href="./"><img src="images/Mr%20Keprins.png" class="navbar-img" alt="Mr Keprins logo"></a>
     <a href="./">Home</a>
-    <a href="./commands.html">Bot Commands</a>
-    <div class="dropdown">
-        <button class="dropbtn">Online Features
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="./learn.html">Keprins Learn</a>
-            <a href="./ai.html">Keprins AI</a>
-        </div>
+    <a href="./commands.html">Commands</a>
+    <a href="#" onclick="addKeprinsToServer()">Add to Discord</a>
+    <div class="topnav-right">
+        <a href="./help.html">Help</a>
+        <a href="#" onclick="login()">Login</a>
+    </div>
+</nav>
+
+<h1 class="large-header">Mr Keprins</h1>
+
+<h3>Mr Keprins is the Ultimate Discord Bot</h3>
+<p>Add him to your server and check out his amazing
+    <a href="./commands">features</a>!</p>
+
+<button class="main-button-2" onclick="addKeprinsToServer()">Add to Discord</button>
+
+<br>
+<div class="feature-group-container">
+    <div class="feature-group">
+        <h1>Fun</h1>
+        <a href="./commands#meme">Memes</a><br>
+        <a href="./commands#trivia">Trivia</a><br>
+        <a href="./commands#wordle">Wordle</a><br>
+        <a href="./commands#hangman">Hangman</a><br>
+    </div>
+    <div class="feature-group">
+        <h1>Useful</h1>
+        <a href="./commands#news">News</a><br>
+        <a href="./commands#weather">Weather</a><br>
+        <a href="./commands#calculator">Calculator</a><br>
+        <a href="./commands#define">Dictionary</a><br>
+    </div>
+    <div class="feature-group">
+        <h1>Better</h1>
+        <a href="./commands#xp">XP</a><br>
+        <a href="./commands#server">Stats</a><br>
+        <a href="./commands#points">Points</a><br>
+        <a href="./commands#events">Events</a><br>
     </div>
 </div>
 
-<h1 class="large-header">Mr Keprins</h1>
-<button class="main-button-2" onclick="addKeprinsToServer()">Add to Discord</button>
+<div class="side-by-side normal-green-background">
+    <img src="images/KeprinsEpicFace.png" alt="Mr Keprins Epic Face">
+    <h2>Mr Keprins is already in <span id="server-count-number">0</span> servers</h2>
+</div>
 
+<div class="side-by-side dark-green-background">
+    <h2 class="left-to-img">A total of <span id="total-users-number">0</span> people have used Mr Keprins</h2>
+    <img class="right-img" src="images/Mr%20Keprins.png" alt="Mr Keprins">
+</div>
 
-<br><br><br><br><br><br>
-<footer>
-    <button>
-        <a href='mailto:cohen.beveridge@hotmail.com'>Contact me for more information</a>
-    </button>
-</footer>
-<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+<div class="side-by-side normal-green-background">
+    <img src="images/KeprinsApproves.png" alt="Mr Keprins Approves">
+    <h2>Try Mr Keprins' amazing features today!</h2>
+</div>
+
 </body>
 </html>
