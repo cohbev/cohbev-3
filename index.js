@@ -13,6 +13,10 @@ function addKeprinsToServer() {
     window.open('https://discord.com/api/oauth2/authorize?client_id=890512432135557141&permissions=1495655513187&scope=applications.commands%20bot', '_blank').focus();
 }
 
-function login() {
+function joinOfficialServer() {
+    window.open('https://discord.gg/qFqGMwkEZT', '_blank').focus();
+}
 
+function login() {
+    window.location.replace('https://discord.com/api/oauth2/authorize?client_id=1087881200112246886&redirect_uri=http%3A%2F%2Fkeprins.tech%2Fauth%2Fdiscord&response_type=code&scope=identify')
 }
