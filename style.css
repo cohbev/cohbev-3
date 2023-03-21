@@ -18,6 +18,7 @@ body {
     font-size: 200px;
     margin-bottom: 50px;
     margin-top: 140px;
+    text-shadow: 0 0 100px lightblue;
 }
 
 header p {
@@ -110,12 +111,13 @@ footer button a {
 
 nav {
     background-color: #3b6442;
+    padding-top: 5px;
     padding-right: 1vw;
     position: fixed;
     top: 0;
     left: 0;
     width: 99vw;
-    height: 9vh;
+    height: 60px;
     z-index: 100;
 }
 
@@ -170,7 +172,7 @@ a .navbar-img {
     padding-bottom: 20px;
     border-radius: 30px;
     text-align: left;
-    box-shadow: 0 0 700px lightblue;
+    box-shadow: 0 0 100px lightblue;
     transition: transform 200ms;
 }
 
@@ -253,7 +255,7 @@ a .navbar-img {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0.8vw;
 }
 
 ::-webkit-scrollbar-track {
@@ -266,4 +268,56 @@ a .navbar-img {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+
+#join-official-server {
+    width: 750px;
+    padding: 30px 10px;
+    margin: 200px calc((100vw - 805px) / 2);
+    border: 5px solid #3b6442;
+    border-radius: 30px;
+    box-shadow: 0 0 100px lightblue;
+}
+
+footer {
+    background-color: #1a2c20;
+    margin: auto -1% -2% -1%;
+    padding: 20px;
+    display: flex;
+}
+
+footer img {
+    max-width: 90px;
+    display: inline-block;
+}
+
+footer .img-container {
+    flex: 33%;
+    width: 33%;
+}
+
+footer h2 {
+    color: white;
+    display: inline-block;
+    flex: 33%;
+    width: 33%;
+    padding-top: 10px;
+}
+
+footer table {
+    display: inline-block;
+    flex: 33%;
+    width: 33%;
+    padding-left: 10%;
+    padding-top: 10px;
+}
+
+footer table tr td {
+    text-align: left;
+    padding-right: 30px;
+}
+
+footer table tr td a {
+    color: #888888;
 }
