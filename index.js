@@ -10,7 +10,7 @@ window.onload = function() {
         })
             .then(result => result.json())
             .then(response => {
-                const {username, avatar, id, email} = response;
+                const {username, discriminator, avatar, id, email} = response;
                 const avatar_url = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
 
                 const login_status = document.getElementById('login-status');
@@ -19,6 +19,17 @@ window.onload = function() {
                 username_container.innerText = username;
                 username_container.href = "./profile.html";
                 login_status.appendChild(username_container);
+
+                fetch('https://discord.com/api/users/@me/guilds', {
+                    headers: {
+                        authorization: `${tokenType} ${accessToken}`,
+                    },
+                })
+                    .then(result => result.json())
+                    .then(response => {
+                        console.log(response);
+                    })
+                    .catch(console.error)
 
             })
             .catch(console.error);
@@ -44,5 +55,5 @@ function joinOfficialServer() {
 }
 
 function login() {
-    window.location.replace('https://discord.com/api/oauth2/authorize?client_id=1087881200112246886&redirect_uri=https%3A%2F%2Fkeprins.tech&response_type=token&scope=identify%20email')
+    window.location.replace('https://discord.com/api/oauth2/authorize?client_id=1087881200112246886&redirect_uri=https%3A%2F%2Fkeprins.tech&response_type=token&scope=identify%20email%20guilds')
 }
