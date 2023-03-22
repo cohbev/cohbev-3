@@ -3,7 +3,7 @@ window.onload = () => {
     const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
 
     if (!accessToken) {
-        window.location.replace('/');
+        alert('not logged in')
     }
 
     fetch('https://discord.com/api/users/@me', {
