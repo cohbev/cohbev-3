@@ -152,6 +152,12 @@ a .navbar-img {
     margin-bottom: -10px;
 }
 
+#login-status img {
+    max-width: 45px;
+    margin-top: -12px;
+    border-radius: 50%;
+}
+
 .space-above {
     margin-top: 100px;
 }

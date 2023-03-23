@@ -35,20 +35,16 @@ window.onload = function() {
             userData[key] = value;
         }
         console.log(userData);
-    }
 
-    if (userData) {
         const login_status = document.getElementById('login-status');
         login_status.removeChild(login_status.firstElementChild);
 
-        let avatar_container = document.createElement('img');
-        avatar_container.src = userData['avatar_url'];
-        login_status.appendChild(avatar_container);
-
-        let username_container = document.createElement("a");
-        username_container.innerText = userData['username'];
-        username_container.href = "./profile.html";
-        login_status.appendChild(username_container);
+        let avatar_link_element = document.createElement('a');
+        avatar_link_element.href = "./profile.html";
+        let avatar_element = document.createElement('img');
+        avatar_element.src = userData['avatar_url'];
+        avatar_link_element.appendChild(avatar_element);
+        login_status.appendChild(avatar_link_element);
     }
 
     const serverCountElement = document.getElementById('server-count-number');
