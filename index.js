@@ -25,9 +25,9 @@ window.onload = function() {
     }
 
     if (document.cookie) {
-        console.log('cookies found');
+        console.log(`Cookies: ${document.cookie}`);
         const allCookies = document.cookie;
-        const cookieArray = allCookies.split(';');
+        const cookieArray = allCookies.split('; ');
         for (let i = 0; i < cookieArray.length; i++) {
             const key = cookieArray[i].split('=')[0];
             const value = cookieArray[i].split('=')[1];
