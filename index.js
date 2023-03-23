@@ -1,4 +1,6 @@
 window.onload = function() {
+    let username;
+
     if (document.cookie) {
         const allCookies = document.cookie;
         const cookieArray = allCookies.split(';');
@@ -45,18 +47,19 @@ window.onload = function() {
             .catch(console.error);
     }
 
-    const login_status = document.getElementById('login-status');
-    login_status.removeChild(login_status.firstElementChild);
+    if (username) {
+        const login_status = document.getElementById('login-status');
+        login_status.removeChild(login_status.firstElementChild);
 
-    let avatar_container = document.createElement("img");
-    avatar_container.src = avatar_url;
-    login_status.appendChild(avatar_container);
+        let avatar_container = document.createElement("img");
+        avatar_container.src = avatar_url;
+        login_status.appendChild(avatar_container);
 
-    let username_container = document.createElement("a");
-    username_container.innerText = username;
-    username_container.href = "./profile.html";
-    login_status.appendChild(username_container);
-
+        let username_container = document.createElement("a");
+        username_container.innerText = username;
+        username_container.href = "./profile.html";
+        login_status.appendChild(username_container);
+    }
 
     const serverCountElement = document.getElementById('server-count-number');
     const serverCount = '100';
