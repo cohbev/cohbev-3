@@ -1,4 +1,13 @@
 window.onload = function() {
+    const allCookies = document.cookie;
+    const cookieArray = allCookies.split(';');
+    for (let i=0; i<cookieArray.length; i++) {
+        const key = cookieArray[i].split('=')[0];
+        const value = cookieArray[i].split('=')[1];
+        console.log(`Key is ${key} and value is ${value}`)
+    }
+
+
     const fragment = new URLSearchParams(window.location.hash.slice(1));
     const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
 
@@ -13,12 +22,11 @@ window.onload = function() {
                 const {username, discriminator, avatar, id, email} = response;
                 const avatar_url = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
 
-                const login_status = document.getElementById('login-status');
-                login_status.removeChild(login_status.firstElementChild);
-                let username_container = document.createElement("a");
-                username_container.innerText = username;
-                username_container.href = "./profile.html";
-                login_status.appendChild(username_container);
+                document.cookie = `username=${username}; expires=Fri, 31 Dec 9999 23:59:59 UTC`;
+                document.cookie = `discriminator=${discriminator}; expires=Fri, 31 Dec 9999 23:59:59 UTC`;
+                document.cookie = `id=${id}; expires=Fri, 31 Dec 9999 23:59:59 UTC`;
+                document.cookie = `email=${email}; expires=Fri, 31 Dec 9999 23:59:59 UTC`;
+                document.cookie = `avatar_url=${avatar_url}; expires=Fri, 31 Dec 9999 23:59:59 UTC`;
 
                 fetch('https://discord.com/api/users/@me/guilds', {
                     headers: {
@@ -27,13 +35,26 @@ window.onload = function() {
                 })
                     .then(result => result.json())
                     .then(response => {
-                        console.log(response);
+                        document.cookie = `guilds=${response}; expires=Fri, 31 Dec 9999 23:59:59 UTC`;
+
                     })
                     .catch(console.error)
 
             })
             .catch(console.error);
     }
+
+    const login_status = document.getElementById('login-status');
+    login_status.removeChild(login_status.firstElementChild);
+
+    let avatar_container = document.createElement("img");
+    avatar_container.src = avatar_url;
+    login_status.appendChild(avatar_container);
+
+    let username_container = document.createElement("a");
+    username_container.innerText = username;
+    username_container.href = "./profile.html";
+    login_status.appendChild(username_container);
 
 
     const serverCountElement = document.getElementById('server-count-number');
