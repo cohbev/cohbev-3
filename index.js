@@ -1,12 +1,13 @@
 window.onload = function() {
-    const allCookies = document.cookie;
-    const cookieArray = allCookies.split(';');
-    for (let i=0; i<cookieArray.length; i++) {
-        const key = cookieArray[i].split('=')[0];
-        const value = cookieArray[i].split('=')[1];
-        console.log(`Key is ${key} and value is ${value}`)
+    if (document.cookie) {
+        const allCookies = document.cookie;
+        const cookieArray = allCookies.split(';');
+        for (let i = 0; i < cookieArray.length; i++) {
+            const key = cookieArray[i].split('=')[0];
+            const value = cookieArray[i].split('=')[1];
+            console.log(`Key is ${key} and value is ${value}`)
+        }
     }
-
 
     const fragment = new URLSearchParams(window.location.hash.slice(1));
     const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
