@@ -54,9 +54,7 @@ window.onload = function() {
         })
         .catch(console.error);
 
-    const serverCountElement = document.getElementById('server-count-number');
-    const serverCount = '100';
-    serverCountElement.textContent = serverCount;
+    void setGuildCount();
 
     const totalUsersElement = document.getElementById('total-users-number');
     const totalUsers = '200';
@@ -74,4 +72,16 @@ function joinOfficialServer() {
 
 function login() {
     window.location.replace('https://discord.com/api/oauth2/authorize?client_id=1087881200112246886&redirect_uri=https%3A%2F%2Fkeprins.tech&response_type=token&scope=identify%20email%20guilds')
+}
+
+async function setGuildCount() {
+    const guildCountElement = document.getElementById('guild-count-number');
+    const url = 'https://raw.githubusercontent.com/cohbev/keprins-file-storage/main/servers.txt';
+    const response = await fetch(url);
+    console.log(`Response from servers.txt: ${response}`);
+    const data = await response.text();
+    console.log(`Data from servers.txt: ${data}`);
+    const guildCount = data.split(/\r\n|\r|\n/).length
+    console.log(`guildCount=${guildCount}`)
+    guildCountElement.textContent = guildCount.toString();
 }
