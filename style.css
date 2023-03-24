@@ -259,12 +259,8 @@ a .navbar-img {
     background-color: #379a00;
 }
 
-#guild-count-number {
-    color: #379a00;
-}
-
-#total-users-number {
-    color: #379a00;
+#guild-count-number, #user-count-number {
+    color: #5dff00;
 }
 
 ::-webkit-scrollbar {

@@ -55,10 +55,7 @@ window.onload = function() {
         .catch(console.error);
 
     void setGuildCount();
-
-    const totalUsersElement = document.getElementById('total-users-number');
-    const totalUsers = '200';
-    totalUsersElement.textContent = totalUsers;
+    void setUserCount();
 }
 
 
@@ -78,10 +75,23 @@ async function setGuildCount() {
     const guildCountElement = document.getElementById('guild-count-number');
     const url = 'https://raw.githubusercontent.com/cohbev/keprins-file-storage/main/servers.txt';
     const response = await fetch(url);
-    console.log(`Response from servers.txt: ${response}`);
     const data = await response.text();
-    console.log(`Data from servers.txt: ${data}`);
     const guildCount = data.split(/\r\n|\r|\n/).length
     console.log(`guildCount=${guildCount}`)
     guildCountElement.textContent = guildCount.toString();
+}
+
+async function setUserCount() {
+    const userCountElement = document.getElementById('user-count-number');
+    const url = 'https://raw.githubusercontent.com/cohbev/keprins-file-storage/main/points.txt';
+    const response = await fetch(url);
+    const data = await response.text();
+    const lines = data.split(/\r\n|\r|\n/);
+    let activeUsers = 0;
+    for (let i = 0; i < lines.length; i++) {
+        if (!lines[i].split('::')[1].startsWith('0:0:0:0:0:0:0')) {
+            activeUsers++;
+        }
+    }
+    userCountElement.textContent = activeUsers.toString();
 }
