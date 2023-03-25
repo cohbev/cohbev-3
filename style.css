@@ -134,8 +134,22 @@ nav #login-status {
     float: left;
     font-size: 1.2rem;
     color: white;
-    text-align: center;
     text-decoration: none;
+    margin-top: -16px;
+    margin-right: -16px;
+    margin-left: -16px;
+}
+
+#login-status img {
+    max-width: 45px;
+    border-radius: 50%;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin-left: -5px;
+}
+
+#login-status:hover a {
+    color: deeppink;
 }
 
 .topnav-right {
@@ -150,12 +164,6 @@ a .navbar-img {
     max-width: 40px;
     margin-top: -10px;
     margin-bottom: -10px;
-}
-
-#login-status img {
-    max-width: 45px;
-    margin-top: -12px;
-    border-radius: 50%;
 }
 
 .space-above {

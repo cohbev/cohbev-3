@@ -42,15 +42,16 @@ window.onload = function() {
             console.log(`username=${username}`);
             console.log(`avatarURL=${avatarURL}`);
 
-            const login_status = document.getElementById('login-statues');
-            login_status.removeChild(login_status.firstElementChild);
-            let avatar_link_element = document.createElement('a');
-            avatar_link_element.innerText = username;
-            avatar_link_element.href = "./profile.html";
+            const login_status = document.getElementById('login-status');
+            login_status.href = './profile.html';
+            login_status.removeAttribute('onclick');
+            login_status.innerText = '';
+            let username_element = document.createElement('a');
+            username_element.innerText = username;
             let avatar_element = document.createElement('img');
             avatar_element.src = avatarURL;
-            avatar_link_element.appendChild(avatar_element);
-            login_status.appendChild(avatar_link_element);
+            login_status.appendChild(avatar_element);
+            login_status.appendChild(username_element);
         })
         .catch(console.error);
 
